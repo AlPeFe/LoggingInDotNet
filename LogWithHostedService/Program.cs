@@ -11,6 +11,6 @@ Host.CreateDefaultBuilder(args)
 
     })
     .UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration
-                .WriteTo.Console())
+                .WriteTo.File("Log.txt"))
     .Build()
     .Run();
